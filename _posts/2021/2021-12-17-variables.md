@@ -1,6 +1,6 @@
 ---
 title: Variables in Javascript
-date: 2019-11-19 10:31:30
+date: 2021-12-17 10:31:30
 categories:
 - Javascript
 tags: Basic Review Variable
