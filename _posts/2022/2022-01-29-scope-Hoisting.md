@@ -7,7 +7,7 @@ tags: Basic Review Scope Hoisting
 ---
 
 # Introduction
-Today's topic of review will be scope. Score is a concept that you get used to while using var, let and const. It is very important to be well aware of this in Javascript. 
+Today's topic of review will be scope and hoisting. Score is a concept that you get used to while using var, let and const. It is very important to be well aware of this in Javascript. 
 
 # Definition
 
