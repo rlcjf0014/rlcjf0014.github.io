@@ -7,7 +7,6 @@ tags: Basic Review OOP DataStructure
 ---
 
 # Introduction
-
 It's been a while since I blogged, but like I always say, I will try to blog more regularly!
 
 # **Data Structure**
@@ -41,7 +40,7 @@ Ex) Stack, queue, linked list...
 7. Transform pseudocode into real code
 
 
-### **Intro to OOP** (Object Oriented Programming)
+# **Intro to OOP** (Object Oriented Programming)
 
 
 _**Computer Programming**_
@@ -76,7 +75,7 @@ The interpreter reads the code and executes the program.
      - Java, C++, C#, Python, PHP, JavaScript, Ruby, Perl
      - Javascript is also object oriented. 
 
-  #### **OOP*****
+## **OOP**
 
   - OOP was covered slightly in an older post, but we will go deeper into it!
   - Object oriented programming is a computer programming paradigm and one of the philosophies. 
@@ -84,7 +83,7 @@ The interpreter reads the code and executes the program.
   - A class can create numerous instances (Objects).
 
 
-    **Advantage**
+   **Advantage**
 
   - **Code Reusability**: You can inherit and edit classes you did not make.
 
@@ -93,7 +92,7 @@ The interpreter reads the code and executes the program.
   - **Great for Big Project**: You can divide the project into different modules using class so that many can work independently on a project at the same time.
 
   ​        
-    **Disadvantage**
+   **Disadvantage**
 
   - Slower process speed. 
   - As the number of objects increase, there is more memory allocated.
@@ -105,54 +104,49 @@ The interpreter reads the code and executes the program.
     - An object is an instance of a class. It's the actual data allocated to actual memory. 
     - When there is a class "car", color, price and speed are properties and moving forward and backward are methods. 
 
-  - ### **OOP Basic Concepts**
+### **OOP Basic Concepts**
 
-    - **Encapsulation**: Like the title, all the properties and methods are encapsulated in a class. Everything is organized and tied into a class. For OOP, a class has all the information so as more instances are created, the program becomes more complicated. Using instantiation to expand the encapsulated class reduces complexity and increases reusability.  
+**Encapsulation**: Like the title, all the properties and methods are encapsulated in a class. Everything is organized and tied into a class. For OOP, a class has all the information so as more instances are created, the program becomes more complicated. Using instantiation to expand the encapsulated class reduces complexity and increases reusability.  
 
-    - **Inheritance**: Child classes can inherit properties and methods of parent class. It gets rid of redundant code. 
+**Inheritance**: Child classes can inherit properties and methods of parent class. It gets rid of redundant code. 
 
-    - **Abstraction**: Abstraction allows the user to use the program easier. It hides unnecessary information and only shows what is important. It groups properties and methods of common purpose and name them. Interface becomes simpler and there is less chance of users to cause unwanted change to the code. It decreases complexity.
+**Abstraction**: Abstraction allows the user to use the program easier. It hides unnecessary information and only shows what is important. It groups properties and methods of common purpose and name them. Interface becomes simpler and there is less chance of users to cause unwanted change to the code. It decreases complexity.
 
-    - **Polymorphism**: Variables and functions of same names can be interpreted differently. It is also related to inheritance. When the parent class changes its properties or methods, the child classes can also use that changes. Use polymorphism to refactor ugly switch/case statements
+**Polymorphism**: Variables and functions of same names can be interpreted differently. It is also related to inheritance. When the parent class changes its properties or methods, the child classes can also use that changes. Use polymorphism to refactor ugly switch/case statements
 
+## **Instantiation Pattern** (Method to create Object before Class keyword was created)
 
-  **Instantiation Pattern** (Method to create Object before Class keyword was created)
+### **Functional**
 
-  1. ## **Functional**
+![](https://miro.medium.com/max/1028/1*SPZnQAWqfvZSCz4Y4rzyzg.png)
 
-     ![img](https://miro.medium.com/max/1028/1*SPZnQAWqfvZSCz4Y4rzyzg.png)
+**Advantage**: This is a method many people use to create a new object. All the functions are in an object so the code is easy to understand. Properties are in a closed scope, making them private.
 
-    
-    **Advantage**: This is a method many people use to create a new object. All the functions are in an object so the code is easy to understand. Properties are in a closed scope, making them private.
+**Disadvantage**: All the methods in a function so when a second instance is created, all the methods and properties need to be copied. When this pattern is used to create a new object after some changes are made to the methods, each object will reference different methods in memory.
 
-    **Disadvantage**: All the methods in a function so when a second instance is created, all the methods and properties need to be copied. When this pattern is used to create a new object after some changes are made to the methods, each object will reference different methods in memory.
+### **Functional Shared Instantiation**
 
-  
-  2. ## **Functional Shared Instantiation**
+![](https://miro.medium.com/max/1053/1*H2EIw20YPMPz7weTmFcD9w.png)
 
-     ![img](https://miro.medium.com/max/1053/1*H2EIw20YPMPz7weTmFcD9w.png)
-
-    Functional shared pattern covers the disadvnatage of functional pattern. This pattern does not copy the methods when an instance is created so it improves memory management and efficiency. There is a different object that has all the methods, so the memory address of that object is only referenced. One disadvantage could be that when a new instance is created after the object that contains all the methods is edited, the new instance and the original each reference methods at different address.
+Functional shared pattern covers the disadvnatage of functional pattern. This pattern does not copy the methods when an instance is created so it improves memory management and efficiency. There is a different object that has all the methods, so the memory address of that object is only referenced. One disadvantage could be that when a new instance is created after the object that contains all the methods is edited, the new instance and the original each reference methods at different address.
 
 
+### **Prototypal Instantiation**
 
-3. ## **Prototypal Instantiation**
+![](https://miro.medium.com/max/1054/1*hyJgQk5ausq5kkQr4Ty_Ew.png)
 
-   ![img](https://miro.medium.com/max/1054/1*hyJgQk5ausq5kkQr4Ty_Ew.png)
+Prototypal pattern uses Object.create to create an object (like the title!). You need to connect the new object with the object with the methods using Object.create (refer to the diagram). Object.create will create an object that uses a specific object as prototype. 
 
-   Prototypal pattern uses Object.create to create an object (like the title!). You need to connect the new object with the object with the methods using Object.create (refer to the diagram). Object.create will create an object that uses a specific object as prototype. 
+**Advantage**: Methods are connected to the prototype object and is not returned within the object. No methods need to be copied, so memory is used more efficiently. 
 
-   **Advantage**: Methods are connected to the prototype object and is not returned within the object. No methods need to be copied, so memory is used more efficiently. 
-
-​   **Disadvantage**: To use this pattern, a separate object needs to be created and be filled with methods.
-
+​**Disadvantage**: To use this pattern, a separate object needs to be created and be filled with methods.
 
 
-4. ## **Pseudoclassical**
+### **Pseudoclassical**
 
-![img](https://miro.medium.com/max/1053/1*65-jFc67sI1B5zRm_91vyQ.png)
+![](https://miro.medium.com/max/1053/1*65-jFc67sI1B5zRm_91vyQ.png)
 
-    Pseudoclassical also uses a prototype like the prototypal pattern. Using a "new" keyword, a new instance is created. Instead of using Object.create, this pattern uses "this". The "this" keyword sets the properties and uses "new" keyword to create a new instance. It is one of the most common patterns to use, but it is harder to design the program to use this pattern. This pattern is great for code reusability.
+Pseudoclassical also uses a prototype like the prototypal pattern. Using a "new" keyword, a new instance is created. Instead of using Object.create, this pattern uses "this". The "this" keyword sets the properties and uses "new" keyword to create a new instance. It is one of the most common patterns to use, but it is harder to design the program to use this pattern. This pattern is great for code reusability.
 
 
 Sources - https://medium.com/dailyjs/instantiation-patterns-in-javascript-8fdcf69e8f9b
