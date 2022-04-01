@@ -9,4 +9,5 @@ I'll try to write regularly so make sure to visit!
 <br />
 <br />Email me to talk about anything! @joshuarule2010@gmail.com
 <br />Check out my website to see what I've been up to! -> sunghyunsong.com 
+<br />Follow me on Github: https://github.com/rlcjf0014
 <br />Add me in LinkedIn: https://www.linkedin.com/in/songj2/
